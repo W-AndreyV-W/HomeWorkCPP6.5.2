@@ -1,0 +1,6 @@
+FROM ubuntu:mantic
+	RUN apt-get update && apt-get install -y clang nano
+	WORKDIR /root/test/
+	COPY  HomeWorkCPP6.1.1.cpp .
+        RUN clang++ HomeWorkCPP6.1.1.cpp -o HomeWorkCPP6.1.1
+	CMD ["./HomeWorkCPP6.1.1"]
